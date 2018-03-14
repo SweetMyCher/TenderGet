@@ -1,79 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<title>TenderGet</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper"><!-- Зачем враппер? -->
 		<header>
   		<h1>Актуальные</h1>
  	  </header>
-		<nav>
-			<p>Обработка</p>
-			<ul>
-				<li><a href="#">Актуальные</a></li>
-				<li><a href="#">В работе</a></li>
-				<li><a href="#">Разьяснение</a></li>
-				<li><a href="#">Подготовка заявки</a></li>
-				<li><a href="#">Отклонение</a></li>
-			</ul>
-			<p>Результат</p>
-			<ul>
-				<li><a href="#">Выигранные</a></li>
-				<li><a href="#">Проигранные</a></li>
-			</ul>
-			<p>Поступления</p>
-			<ul>
-				<li><a href="#">Новые</a></li>
-				<li><a href="#">Отобранные</a></li>
-				<li><a href="#">Спам</a></li>
-			</ul>
-			<p>Настройка системы</p>
-			<ul>
-	    	<li><a href="#">Запросы</a></li>
-	  		<li><a href="#">Журнал</a></li>
-	  		<li><a href="#">Пользователи</a></li>
-	  		<li><a href="#">Статистика</a></li>
-	  	</ul>
-	  	<form>
-	  		<p><input id="text" type="text" name="text">
-	  		<input type="submit" name="search"></p>
-	  	</form>
-  	</nav>
-  	<div id="left-pannel">
-  		<a href="#">|||</a>
- 			<a href="#"><img id="deni" src="img/daeneris.jpg" alt="profile"></a>
-  	</div>
+ 	  <aside>
+ 	  	<div id="left-pannel">
+	  		<a href="#"><img src="img/menu.svg" alt="Menu icon"></a>
+	  		<p>TenderGet</p>
+	 			<a href="#"><img id="deni" src="img/daeneris.jpg" alt="Your profile photo"></a>
+	  	</div>
+	  	<nav>
+				<p>Обработка</p>
+				<ul>
+					<li><a href="#">Актуальные</a></li>
+					<li><a href="#">В работе</a></li>
+					<li><a href="#">Разьяснение</a></li>
+					<li><a href="#">Подготовка заявки</a></li>
+					<li><a href="#">Отклонение</a></li>
+				</ul>
+				<p>Результат</p>
+				<ul>
+					<li><a href="#">Выигранные</a></li>
+					<li><a href="#">Проигранные</a></li>
+				</ul>
+				<p>Поступления</p>
+				<ul>
+					<li><a href="#">Новые</a></li>
+					<li><a href="#">Отобранные</a></li>
+					<li><a href="#">Спам</a></li>
+				</ul>
+				<p>Настройка системы</p>
+				<ul>
+		    	<li><a href="#">Запросы</a></li>
+		  		<li><a href="#">Журнал</a></li>
+		  		<li><a href="#">Пользователи</a></li>
+		  		<li><a href="#">Статистика</a></li>
+		  	</ul>
+		  	<form>
+		  		<input id="text" type="text" name="text" placeholder="Поиск...">
+		  		<input type="submit" name="search">
+		  	</form>
+	  	</nav>
+ 	  </aside>  	
   	<section>
 	  	<table>
-	  		<tr>
-	  			<th>#</th>
-	  			<th>Статус</th>
-		  		<th>Наименование</th>
-	  			<th>Процедура</th>	
-		  		<th>НМЦ</th>
-		  		<th>Срок</th>
-	  			<th>ФЗ</th>
-	  			<th></th>
-	  		</tr>
-	  		<tr>
-	  			<td>1</td>
-		  		<td><img src="img/status.jpg" alt="status"></td>
-		  		<td>Услуги сопровождающего сайта(689932)</td>
-	  			<td>Открыйтый запрос предложений</td>
-	  			<td>120000р</td>
-	 	 			<td>15.08.2016</td>
-	  			<td>ФЗ-223</td>
-	  			<td><a href="#"><img src="img/link.jpg" alt="link"></a></td>
-	 		 	</tr>
+	  		<thead>
+		  		<tr>
+		  			<th>#</th>
+		  			<th>Статус</th>
+			  		<th>Наименование</th>
+		  			<th>Процедура</th>	
+			  		<th>НМЦ</th>
+			  		<th><a class="asc" href="#">Срок</a></th><!-- Забыл про сортировку -->
+		  			<th>ФЗ</th>
+		  			<th></th>
+		  		</tr>
+	  		</thead>
+	  		<tbody>
+		  		<tr>
+		  			<td>1</td>
+			  		<td>
+							<div class="status">
+								<span class="ok"></span>
+								<span class="blocked"></span>
+								<span class="question"></span>
+							</div>
+			  		</td>
+			  		<td>Услуги сопровождающего сайта (689932)</td>
+		  			<td>Открыйтый запрос предложений</td>
+		  			<td>120000</td><!-- Валюту лучше сделать с помощью after в CSS -->
+		 	 			<td>15.08.2016</td>
+		  			<td>ФЗ-223</td>
+		  			<td><a href="#"><img src="img/link.jpg" alt="Tender link"></a></td>
+		 		 	</tr>
+	 		 	</tbody>
 		  </table>
 		  <div id="status">
-		  	<p>Проба пера</p>
-		  	<p>Обработано 10 тендеров</p>
+		  	<img src="img/achievment.png" alt="Achievment icon">
+		  	<p class="title">Проба пера</p>
+		  	<p class="subtitle">Обработано 10 тендеров</p>
 		  </div>
 	  </section>
-  	</div>
+  </div>
 </body>
 </html>
